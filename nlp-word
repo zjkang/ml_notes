@@ -1,45 +1,39 @@
 Corpus 语料库；文集
 
 ———————————————
+Word representation: word embedding / word vector
 
-Word representation
+1. One-hot encoding vector
+2. Frequency based Embedding
+3. Prediction based Embedding
 
+2. Frequency based Embedding
+* Count Vector
+* TF-IDF Vector
+* Co-Occurrence Vector: context relavent
+  Co-Occurrence and Context Window
+
+3. Prediction based Embedding
+    
+*1 CBOW(Continuous bag of words)
+  predict target word given context words
+  3-layer network:  activation (linear averages)
+  
+  ** Input: context word(s) 
+  ** Output: target word
+  ** Loss function: log loss
+  ** Word vector: The weight  between the hidden layer and the output layer is taken as the word vector representation of the word
+
+*2 Skip-gram model
+   predict the context given a word
+   3-layer network:  activation
+ 
+  ** Input: target word 
+  ** Output: context words
+  ** Loss function: log loss
+  ** Word vector: The weights between the input and the hidden layer are taken as the word vector representation after training
+
+[refer]
 https://www.analyticsvidhya.com/blog/2017/06/word-embeddings-count-word2veec/
-
-One-hot encoding vector
-
-1. Frequency based Embedding
-2. Prediction based Embedding
-
-1. Frequency based Embedding
-    1. Count Vector
-    2. TF-IDF Vector
-    3. Co-Occurrence Vector: context relavent
-Co-Occurrence and Context Window
-
-2. Prediction based Embedding
-    1. CBOW(Continuous bag of words)
-Predict target word given context words
-3-layer network:  activation (linear averages)
-* Input: context word(s) 
-* Output: target word
-* Loss function: log loss
-* Word vector: The weight  between the hidden layer and the output layer is taken as the word vector representation of the word
-
-    2. Skip-gram model
-predict the context given a word
-3-layer network:  activation
-* 
-* Word vector: The weights between the input and the hidden layer are taken as the word vector representation after training
-
-
-
-
-
-
-Word embedding / word vector
-
-
-
 
 
