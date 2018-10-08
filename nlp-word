@@ -17,6 +17,12 @@ Word representation: word embedding / word vector
 
 3. Prediction based Embedding
    the meaning of a word can be inferred by the company (context) it keeps
+   
+   Convert all words w_i, ..., w_V to learn embedding matrix W, learning
+   W = [ -- w_{e1} -- 
+             ....
+         -- w_{eV} --]_{V x N}
+  
     
 *1 CBOW(Continuous bag of words)
   predict target word given context words
@@ -24,8 +30,8 @@ Word representation: word embedding / word vector
   
   ** Input: context word(s) 
   ** Output: target word
-  ** Loss function: log loss
-  ** Word vector: The weight  between the hidden layer and the output layer is taken as the word vector representation of the word
+  ** Loss function: log loss (cross entropy loss)
+  ** Word vector: The weight between the hidden layer and the output layer is taken as the word vector representation of the word
 
 *2 Skip-gram model
    predict the context given a word
