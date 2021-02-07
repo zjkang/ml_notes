@@ -13,6 +13,8 @@ pickle.dump(model, open(model_file_path, 'wb'))
 model = pickle.load(open(model_file_path, 'rb'))
 result_val = model.score(xval, yval)
 result_test = model.score(xtest, ytest)
+
+model.coef_
 ```
 
 
